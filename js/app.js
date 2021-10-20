@@ -1,5 +1,5 @@
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw1.js');
+    navigator.serviceWorker.register('/PWA-U2-P5/sw1.js');
 }
 
 

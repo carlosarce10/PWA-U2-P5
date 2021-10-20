@@ -27,13 +27,13 @@ self.addEventListener("install",(event) =>{
     const promesaCache = caches.open(CACHE_STATIC_NAME)
     .then(cache =>{
         return cache.addAll([
-            "/",
-            "index.html",
-            "css/page.css",
-            "img/Inicio.jpg",
-            "js/app.js",
-            "pages/view-offline.html",
-            "img/sinConexion.png"
+            "/PWA-U2-P5",
+            "/PWA-U2-P5/index.html",
+            "/PWA-U2-P5/css/page.css",
+            "/PWA-U2-P5/img/Inicio.jpg",
+            "/PWA-U2-P5/js/app.js",
+            "/PWA-U2-P5/pages/view-offline.html",
+            "/PWA-U2-P5/img/sinConexion.png"
         ]);
     });
 
@@ -121,7 +121,7 @@ self.addEventListener("fetch", (event)=>{
              }
              if(event.request.url.includes(".jpg")||event.request.url.includes(".png")){
                 console.log("Imagen no encontrada: "+event.request.url);
-                return caches.match("/img/sinConexion.png");
+                return caches.match("/PWA-U2-P5/img/sinConexion.png");
              }
          });
      })
